@@ -1,0 +1,30 @@
+{% extends 'pedidos/base.html' %}
+
+{% block content %}
+    
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>nome </th>
+				<th>telefone</th>
+				<th>endereco</th>
+				<th>Editar</th>
+				<th>Excluir</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for pedido in pedidos %}
+			<tr>
+				<td>{{pedido.nome_pedido}}</td>
+				<td>{{pedido.tele_pedido}}</td>
+				<td>{{pedido.endere_pedido}}</td>
+				<td><a href="{% url 'editar' pedido.id  %}" class="btn btn-warning">Editar</a></td>
+				<td><a href="{% url 'deletar' pedido.id %}" class="btn btn-danger">Excluir</a></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+{% endblock content %}
