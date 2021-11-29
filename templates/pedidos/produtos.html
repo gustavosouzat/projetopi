@@ -6,19 +6,19 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th>nome </th>
-				<th>telefone</th>
-				<th>endereco</th>
+				<th>codigo </th>
+				<th>produto</th>
+				<th>valor</th>
 				<th>Editar</th>
 				<th>Excluir</th>
 			</tr>
 		</thead>
 		<tbody>
-			{% for clientes in clientes %}
+			{% for produtos in produtos %}
 			<tr>
-				<td>{{pedido.nome_pedido}}</td>
-				<td>{{pedido.tele_pedido}}</td>
-				<td>{{pedido.endere_pedido}}</td>
+				<td>{{pedido.codigo_pedido}}</td>
+				<td>{{pedido.produto_pedido}}</td>
+				<td>{{pedido.valor_pedido}}</td>
 				<td><a href="{% url 'editar' pedido.id  %}" class="btn btn-warning">Editar</a></td>
 				<td><a href="{% url 'deletar' pedido.id %}" class="btn btn-danger">Excluir</a></td>
 			</tr>

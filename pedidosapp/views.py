@@ -30,4 +30,8 @@ def criar_pedido (request):
 
 def clientes(request):
     #return HttpResponse("<h1> aqui e o index<h1>")
-    return render(request, 'pedidos/clientes.html')
+    return render(request, 'pedidos/clientes.html',{'clientes':clientes})
+
+def produtos(request):
+    #return HttpResponse("<h1> aqui e o index<h1>")
+    return render(request, 'pedidos/produtos.html',{'produtos':produtos})
